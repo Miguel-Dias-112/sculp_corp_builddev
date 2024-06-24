@@ -10,6 +10,7 @@ export default defineConfig({
         page2: './Paginas/comonaofugir/index.html', // página inicial
         page3: './Paginas/defictcalorico/index.html', // página inicial
         page15: './Paginas/dietajejum/index.html', // página inicial
+        page16: './Paginas/dietajejum/naoconseguirjejuar/index.html', // página inicial
 
         page4: './Paginas/dietajejum/cardapioCom/index.html', // página inicial
         page5: './Paginas/dietajejum/cardapiosem/index.html', // página inicial
