@@ -1,0 +1,141 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+body main{
+    margin-top: 35px;
+    flex-direction: column;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap: 50px;  
+}
+body img{
+    width: 100%;
+    max-width: 600px;
+
+}
+main h2{
+    /* Como usar o cardápio do jejum intermitente */
+/* Rectangle 125 */
+
+
+    background: #FF0000;
+    border-radius: 5.49068px;
+
+    height: 48px;
+    right: 66.2px;
+    top: 595px;
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.764px;
+    line-height: 48px;
+    color: #FFFFFF;
+    height: auto;
+    text-align: center;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+main section p{
+
+    max-width: 606px;
+    height: max-content;
+    padding-bottom: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.8272px;
+    line-height: 22px;
+    text-align: justify;
+    color: #000000;
+
+    padding: 0;
+}
+.listasimples li{
+    max-width: 606px;
+    height: max-content;
+    padding-top:10px;
+    padding-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.8272px;
+    line-height: 22px;
+    text-align: justify;
+    color: #000000;
+
+}
+main section{
+    width: 90%;
+    max-width: 1280px;
+
+}
+.cardapio{
+    width: 152px;
+    height: 35px;
+}
+table { 
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 35px;
+    }
+td{
+    border: red 3px solid;
+
+}
+th{
+    width: 100px;
+    height: 104px;
+    color: red;
+    /* Café da manhã */
+
+
+
+font-family: 'Abhaya Libre ExtraBold';
+font-style: normal;
+font-weight: 800;
+font-size: 21.2039px;
+line-height: 25px;
+
+color: #FF0000;
+
+
+    border: red 3px solid;
+    margin: 0;
+    padding: 0;
+    background: #D9D9D9;
+}
+
+.listasimples li{
+    max-width: 606px;
+    height: max-content;
+    padding-top:10px;
+    padding-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.8272px;
+    line-height: 22px;
+    text-align: justify;
+    color: #000000;
+
+}
+
+.listasimples li ul{
+    list-style: disc;
+}
+.listasimples li p {
+    margin: 0;
+    padding: 0;
+}
