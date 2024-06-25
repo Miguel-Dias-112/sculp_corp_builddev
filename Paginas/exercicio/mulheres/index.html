@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="../../header.css">
+    <link rel="stylesheet" href="../../paginaAcesso.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scult Corp</title>
+  </head>
+  <script>
+    function goTo(link){
+        let a = document.createElement('a')
+        a.href = link
+        a.click()
+        console.log(link)
+    }
+    let clicked = false;
+    function createpages(id,imgsrc, texto,link){
+        if(clicked){
+            let x = document.getElementsByClassName('some')
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.display = 'flex'
+            }
+            let y = document.getElementsByClassName('excluir')
+            console.log("elemen",y)
+            let ul = document.getElementById('ul')
+            let tam = y.length
+            for (let x = 0; x <tam; x++) {
+                console.log(y[0],y)
+                ul.removeChild(y[0])
+            }
+            clicked = false;
+            return;
+        }
+         
+        clicked = true;
+        let x = document.getElementsByClassName('some')
+        for (let i = 0; i < x.length; i++) {
+            if(i == id-1){
+                continue
+            }
+            x[i].style.display = 'none'
+           
+        }
+        let ul = document.getElementById('ul')
+        let li = document.createElement('li')
+        let li2 = document.createElement('li')
+        let li3 = document.createElement('li')
+        let h3 = document.createElement('h3')
+        h3.innerHTML = texto
+        ul.appendChild(h3);
+        li.innerHTML = 
+        `
+            <img src="${imgsrc}" alt="">
+            <p>Iniciante</p>
+            <div>></div>
+        `
+        
+        li2.innerHTML = 
+        `
+            <img src="${imgsrc}" alt="">
+            <p>Intermediário</p>
+            <div>></div>
+        `
+        li3.innerHTML = 
+        `
+            <img src="${imgsrc}" alt="">
+            <p>Avançado</p>
+            <div>></div>
+        `
+        li.className = 'excluir'
+        li2.className = 'excluir'
+        li3.className = 'excluir'
+        h3.className = 'excluir grifado'
+
+        li.addEventListener('click',  ()=>{
+            console.log("s")
+            goTo('./treinos/'+link+'/iniciante.html')
+        })
+        li2.addEventListener('click',  ()=>{
+            goTo('./treinos/'+link+'/intermediario.html')
+        })
+        li3.addEventListener('click', ()=>{
+            goTo('./treinos/'+link+'/avancado.html')
+        })
+        
+        ul.appendChild(li)
+        ul.appendChild(li2)
+        ul.appendChild(li3)
+
+
+    }
+</script>
+  <body>
+        <header>
+            <div onclick="goTo('../')"> ← </div>
+            <p>Exercício para mulheres</p>
+
+        </header>
+        <main>
+            <ul id="ul">
+                <li onclick="goTo('./naoconseguirjejuar/index.html')">
+                    <img src="./assets/como.png" alt="">
+                    <p>Como usar os exercícios</p>
+                    <div>></div>
+                </li>
+                <li onclick="goTo('./oqueejejum/index.html')">
+                    <img src="./assets/diatreino.png" alt="">
+                    <p>Dias de treino</p>
+                    <div>></div>
+                </li>
+                <li onclick="goTo('./diasjejuar/index.html')">
+                    <img src="./assets/cardio.png" alt="">
+                    <p>Cardio</p>
+                    <div>></div>
+                </li>
+                <li class="some" onclick="createpages(1,'./assets/quadriceps.png','Treinos Quadríceps, adutores da coxa e <br> panturrilha', 'peitoTricepsAbdomen')">
+                    <img src="./assets/quadriceps.png" alt="">
+                    <p>Quadríceps, adutores da coxa e <br> panturrilha
+                    </p>
+                    <div>></div>
+                </li>
+                
+                <li class="some" onclick="createpages(2,'./assets/peito.png','Treinos de Peito e Tríceps e abdomen','pernaPanturrilha')">
+                    <img src="./assets/peito.png" alt="">
+                    <p>Peito e Tríceps e abdomen</p>
+                    <div>></div>
+                </li>
+
+                <li class="some" onclick="createpages(3,'./assets/posterior.png','Treinos Posterior da coxa, gluúteo e abdominal')">
+                    <img src="./assets/posterior.png" alt="">
+                    <p>Posterior da coxa, gluúteo e abdominal</p>
+                    <div>></div>
+                </li>
+                <li class="some" onclick="createpages(4,'./assets/costas.png','Costas, braços e Ante braço')">
+                    <img src="./assets/costas.png" alt="">
+                    <p>Costas, braços e Ante braço</p>
+                    <div>></div>
+                </li>
+
+                
+              
+                
+            </ul>
+          
+
+
+        </main>
+
+
+  </body>
+</html>

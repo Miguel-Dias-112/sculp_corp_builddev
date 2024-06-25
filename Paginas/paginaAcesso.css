@@ -59,3 +59,41 @@ ul li p {
     height: 100%;
 }
 
+section{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grifado{
+    /* Treinos de Peito e Tríceps e abdomem */
+/* Rectangle 420 */
+
+
+
+    width: 100%;
+    height: 26px;
+    right: 105px;
+    top: 1002px;
+
+    font-family: 'Black Han Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18.1784px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+
+
+}
+button{
+    width: 329px;
+    height: 89px;
+    text-align: center;
+    background: #FF0000;
+align-self: center;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}

@@ -15,14 +15,91 @@
         a.click()
         console.log(link)
     }
+    let clicked = false;
+    function createpages(id,imgsrc, texto,link){
+        if(clicked){
+            let x = document.getElementsByClassName('some')
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.display = 'flex'
+            }
+            let y = document.getElementsByClassName('excluir')
+            console.log("elemen",y)
+            let ul = document.getElementById('ul')
+            let tam = y.length
+            for (let x = 0; x <tam; x++) {
+                console.log(y[0],y)
+                ul.removeChild(y[0])
+            }
+            clicked = false;
+            return;
+        }
+         
+        clicked = true;
+        let x = document.getElementsByClassName('some')
+        for (let i = 0; i < x.length; i++) {
+            if(i == id-1){
+                continue
+            }
+            x[i].style.display = 'none'
+           
+        }
+        let ul = document.getElementById('ul')
+        let li = document.createElement('li')
+        let li2 = document.createElement('li')
+        let li3 = document.createElement('li')
+        let h3 = document.createElement('h3')
+        h3.innerHTML = texto
+        ul.appendChild(h3);
+        li.innerHTML = 
+        `
+            <img src="${imgsrc}" alt="">
+            <p>Iniciante</p>
+            <div>></div>
+        `
+        
+        li2.innerHTML = 
+        `
+            <img src="${imgsrc}" alt="">
+            <p>Intermediário</p>
+            <div>></div>
+        `
+        li3.innerHTML = 
+        `
+            <img src="${imgsrc}" alt="">
+            <p>Avançado</p>
+            <div>></div>
+        `
+        li.className = 'excluir'
+        li2.className = 'excluir'
+        li3.className = 'excluir'
+        h3.className = 'excluir grifado'
+
+        li.addEventListener('click',  ()=>{
+            console.log("s")
+            goTo('./treinos/'+link+'/iniciante.html')
+        })
+        li2.addEventListener('click',  ()=>{
+            goTo('./treinos/'+link+'/intermediario.html')
+        })
+        li3.addEventListener('click', ()=>{
+            goTo('./treinos/'+link+'/avancado.html')
+        })
+        
+        ul.appendChild(li)
+        ul.appendChild(li2)
+        ul.appendChild(li3)
+
+
+    }
 </script>
   <body>
         <header>
             <div onclick="goTo('/index.html')"> ← </div>
             <p>Exercício</p>
+
         </header>
         <main>
-            <ul>
+            <ul id="ul">
                 <li onclick="goTo('./naoconseguirjejuar/index.html')">
                     <img src="./assets/como.png" alt="">
                     <p>Como usar os exercícios</p>
@@ -38,27 +115,35 @@
                     <p>Cardio</p>
                     <div>></div>
                 </li>
-                <li onclick="goTo('./numerorefeicoes/index.html')">
+                <li class="some" onclick="createpages(1,'./assets/peito.png','treinos de Peito e Tríceps e abdomen', 'peitoTricepsAbdomen')">
                     <img src="./assets/peito.png" alt="">
                     <p>Peito e Tríceps e abdomen</p>
                     <div>></div>
                 </li>
-                <li onclick="goTo('./horariosjejuar/index.html')">
+
+
+
+                <li class="some" onclick="createpages(2,'./assets/pernas.png', 'treinos de Pernas e Panturilha', 'pernaPanturrilha')">
                     <img src="./assets/pernas.png" alt="">
                     <p>Pernas e Panturilha</p>
                     <div>></div>
                 </li>
-                <li onclick="goTo('./exerciciosjejum/index.html')">
+
+                <li class="some" onclick="createpages(3,'./assets/costas.png', 'treinos de Costas, Braços e abdomen')">
                     <img src="./assets/costas.png" alt="">
                     <p>Costas, braços e Abdomne</p>
                     <div>></div>
                 </li>
-                <li onclick="goTo('./cardapiosem/index.html')">
+
+                <li class="some" onclick="createpages(4,'./assets/ombro.png', 'treinos de Ombra, Antre braço')">
                     <img src="./assets/ombro.png" alt="">
                     <p>Ombro, Ante braço</p>
                     <div>></div>
                 </li>
-                
+              
+                <button onclick="goTo('./mulheres/index.html')" class="some">
+                    Exercicios para Mulheres<br>Clique aqui!
+                </button>
             </ul>
           
 
