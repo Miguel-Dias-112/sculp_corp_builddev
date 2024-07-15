@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="../../header.css">
+    <link rel="stylesheet" href="./receitas.css">
+
+    <link rel="stylesheet" href="../../paginaAcesso.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scult Corp</title>
+  </head>
+  <script>
+    function goTo(link){
+        let a = document.createElement('a')
+        a.href = link
+        a.click()
+        console.log(link)
+    }
+    
+    function gerarReceita(receita){
+       /*let receita = {
+         titulo: "Café",
+         imgSrc:"./assets/image.png",
+         ingredientes: [
+           "1 xicara de café",
+           "1 colher de sopa de óleo de coco",
+           "1 colher de sopa de manteiga"
+         ],
+         modoDePreparo: "Bata todos os ingredientes no liquidificador e sirva em seguida.",
+         reversed: false
+       }*/
+    
+    
+    
+       console.log(receita)
+       let itemCtn = document.createElement('div')
+       itemCtn.classList.add('itemCtn')
+       let titulo = document.createElement('h1')
+       titulo.innerHTML = receita.titulo
+       itemCtn.appendChild(titulo)
+       let ingredientesCtn = document.createElement('div')
+       ingredientesCtn.classList.add('ingredientesCtn')
+       let side = document.createElement('div')
+       side.classList.add('side')
+    
+       let img = document.createElement('img')
+       img.src = receita.imgSrc
+       side.appendChild(img)
+    
+       let div = document.createElement('div')
+       div.classList.add('side')
+       let h2 = document.createElement('h2')
+       h2.innerHTML = "Ingredientes"
+       let ul = document.createElement('ul')
+       receita.ingredientes.forEach(ingrediente => {
+         let li = document.createElement('li')
+         li.innerHTML = ingrediente
+         ul.appendChild(li)
+       })
+       div.appendChild(h2)
+       div.appendChild(ul)
+       ingredientesCtn.appendChild(side)
+       ingredientesCtn.appendChild(div)
+       itemCtn.appendChild(ingredientesCtn)
+       let h2h = document.createElement('h2')
+       h2h.innerHTML = "Modo de Preparo"
+       if(receita.reversed){
+         h2h.classList.add('demo')
+         ingredientesCtn.classList.add('reverseflex')
+    
+       }
+    
+    
+       itemCtn.appendChild(h2h)
+       let p = document.createElement('p')
+       p.innerHTML = receita.modoDePreparo
+       itemCtn.appendChild(p)
+    
+       let x = document.getElementById('lista')
+       x.appendChild(itemCtn)
+    
+     
+     }
+ 
+</script>
+  <body>
+        <header>
+            <div onclick="goTo('../')"> ← </div>
+            <p>Almoço</p>
+
+        </header>
+        <main>
+          
+            <div id="lista" class="lista" >  
+            
+              <script src="/dadosAlmoco.js"></script>
+              <script >
+               // import getDados from "./dados.js";
+                function gerarLista(){
+                      console.log(getDados())
+                      for (let i = 0; i < getDados().receitas.length; i++) {
+                        gerarReceita(getDados().receitas[i]);
+                      }
+                }
+                gerarLista()
+              </script>
+              
+              <div class="itemCtn">
+                <h1>Purê de Couve-flir com Arroz Integral</h1>
+                <img style="align-self: center;" src="./assets/image15.png">
+                <div class="ingredientesCtn" style="justify-content: space-between;">
+                    <div class="side" style="width: 40%;">
+                        <h2>
+                            Ingredientes para o pure de couve-flor
+                        </h2>
+                        <ul>
+                            <li>1 couve-flor média <br> cortada em floretes</li>
+                            <li>2 dentes de alho picados</li>
+                            <li>2 colheres de sopa de manteiga ou azeite de oliva</li>
+                            <li>Sal e pimenta a gosto</li>
+                        </ul>
+                    </div>
+                    <div class="side" style="width: 40%;">
+                      <h2>
+                          Ingredientes para o arroz integral
+                      </h2>
+                      <ul>
+                          <li>1 xícara de arroz <br> integral</li>
+                          <li>2 xícaras de água ou caldo de legumes</li>
+                          <li>Sal a gosto</li>
+                      </ul>
+                  </div>
+
+                </div>
+                <h2> Modo de preparo do purê de couve-flor</h2>
+                <ol style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; padding: 0; margin: 0;">
+                    <li style="padding-left: 10px;">Cozinhe a couve-flor em água fervente até ficar macia.</li>
+                    <li style="padding-left: 10px;">Escorra bem a couve flor cozida e coloque em um<br> processador de alimentos ou liquidificador.</li>
+                    <li style="padding-left: 10px;">Adicione o alho, a manteiga ou o azeite de oliva, o,<br/> sal e a pimenta.</li>
+                    <li style="padding-left: 10px;">Bata até obter mistura cremosa e homogênea. <br> Reserve</li>
+                </ol>
+                <h2> Modo de preparo do arroz integral</h2>
+                <ol style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; padding: 0; margin: 0;">
+                    <li style="padding-left: 10px;">Em uma panela, coloque o arroz integral e a água ou caldo d elegumes</li>
+                    <li style="padding-left: 10px;">Tempere com sal a gosto e leve ao fogo médio</li>
+                    <li style="padding-left: 10px;">Deixe cozinhar por cerca de 30-40 minutos, ou até que o<br> arroz esteja macio e a água tenha sido absorvida</li>
+                    <li style="padding-left: 10px;">Retire do fog e deixe descansar por alguns minutos</li>
+                </ol>
+                <h2> Montagem</h2>
+                <ol style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; padding: 0; margin: 0; padding-bottom: 100px;">
+                  <li style="padding-left: 10px;">Em pratos individuais, coloque uma porção do purê de couve-flor e outra do arroz integral ao lado.</li>
+                  <li style="padding-left: 10px;">Sirva quente como acompanhamento de outros pratos, como carnes ou legumes grelhados.</li>
+
+              </ol>
+              </div>
+
+            </div>
+              
+        </main>
+       
+  </body>
+</html>

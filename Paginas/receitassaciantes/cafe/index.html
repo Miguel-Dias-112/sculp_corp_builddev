@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="../../header.css">
+    <link rel="stylesheet" href="./receitas.css">
+
+    <link rel="stylesheet" href="../../paginaAcesso.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scult Corp</title>
+  </head>
+  <script>
+    function goTo(link){
+        let a = document.createElement('a')
+        a.href = link
+        a.click()
+        console.log(link)
+    }
+    
+ 
+</script>
+  <body>
+        <header>
+            <div onclick="goTo('../')"> ← </div>
+            <p>Café da manhã</p>
+
+        </header>
+        <main>
+          
+            <div id="lista" class="lista" >  
+              
+            </div>
+              
+        </main>
+        <script  type="module" src="./dados.js"></script>
+        <script  type="module" src="/dadosCafe.js"></script>
+        <script>
+             function gerarReceita(receita){
+                /*let receita = {
+                  titulo: "Café",
+                  imgSrc:"./assets/image.png",
+                  ingredientes: [
+                    "1 xicara de café",
+                    "1 colher de sopa de óleo de coco",
+                    "1 colher de sopa de manteiga"
+                  ],
+                  modoDePreparo: "Bata todos os ingredientes no liquidificador e sirva em seguida.",
+                  reversed: false
+                }*/
+
+
+
+                console.log(receita)
+                let itemCtn = document.createElement('div')
+                itemCtn.classList.add('itemCtn')
+                let titulo = document.createElement('h1')
+                titulo.innerHTML = receita.titulo
+                itemCtn.appendChild(titulo)
+                let ingredientesCtn = document.createElement('div')
+                ingredientesCtn.classList.add('ingredientesCtn')
+                let side = document.createElement('div')
+                side.classList.add('side')
+
+                let img = document.createElement('img')
+                img.src = receita.imgSrc
+                side.appendChild(img)
+
+                let div = document.createElement('div')
+                div.classList.add('side')
+                let h2 = document.createElement('h2')
+                h2.innerHTML = "Ingredientes"
+                let ul = document.createElement('ul')
+                receita.ingredientes.forEach(ingrediente => {
+                  let li = document.createElement('li')
+                  li.innerHTML = ingrediente
+                  ul.appendChild(li)
+                })
+                div.appendChild(h2)
+                div.appendChild(ul)
+                ingredientesCtn.appendChild(side)
+                ingredientesCtn.appendChild(div)
+                itemCtn.appendChild(ingredientesCtn)
+                let h2h = document.createElement('h2')
+                h2h.innerHTML = "Modo de Preparo"
+                if(receita.reversed){
+                  h2h.classList.add('demo')
+                  ingredientesCtn.classList.add('reverseflex')
+
+                }
+
+
+                itemCtn.appendChild(h2h)
+                let p = document.createElement('p')
+                p.innerHTML = receita.modoDePreparo
+                itemCtn.appendChild(p)
+
+                let x = document.getElementById('lista')
+                x.appendChild(itemCtn)
+
+              
+              }
+
+
+              function gerarLista(){
+                console.log(getDados())
+                for (let i = 0; i < getDados().receitas.length; i++) {
+                  gerarReceita(getDados().receitas[i]);
+                }
+                
+              }
+              gerarLista()
+        </script>
+  </body>
+</html>

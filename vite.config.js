@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   build: {
     outDir: 'dist', // diretório de saída para os arquivos construídos
+    allowJs: true,
     rollupOptions: {
       input: {
         index: './index.html', // página inicial
@@ -44,8 +45,37 @@ export default defineConfig({
 
         page25: './Paginas/listacompras/index.html', // página inicial
         page26: './Paginas/tabeladealimentos/index.html', // página inicial
+        page31: "./Paginas/receitassaciantes/index.html",
 
 
+        page32: './Paginas/dietajejum/naoconseguirjejuar/index.html', // página inicial
+        page33: './Paginas/receitassaciantes/modousar/index.html', // página inicial
+        page34: './Paginas/receitassaciantes/cafe/index.html', // página inicial
+        page35: './Paginas/receitassaciantes/almoco/index.html', // página inicial
+        page36: './Paginas/receitassaciantes/cafetarde/index.html', // página inicial
+
+
+        page37: "./Paginas/receitassaciantes/jantar/index.html",
+        page38: "./Paginas/receitassaciantes/sobremesas/index.html",
+        page39: "./Paginas/receitassaciantes/bebidas/index.html",
+
+        page41: "./Paginas/exercicio/mulheres/treinos/quadriceps/iniciante.html",
+        page42: "./Paginas/exercicio/mulheres/treinos/quadriceps/intermediario.html",
+        page43: "./Paginas/exercicio/mulheres/treinos/quadriceps/avancado.html",
+
+        page44: "./Paginas/exercicio/mulheres/treinos/peitotriceps/iniciante.html",
+        page45: "./Paginas/exercicio/mulheres/treinos/peitotriceps/intermediario.html",
+        page46: "./Paginas/exercicio/mulheres/treinos/peitotriceps/avancado.html",
+
+        page47: "./Paginas/exercicio/mulheres/treinos/posterior/iniciante.html",
+        page48: "./Paginas/exercicio/mulheres/treinos/posterior/intermediario.html",
+        page49: "./Paginas/exercicio/mulheres/treinos/posterior/avancado.html",
+
+        page50: "./Paginas/exercicio/mulheres/treinos/costasbracos/iniciante.html",
+        page51: "./Paginas/exercicio/mulheres/treinos/costasbracos/intermediario.html",
+        page52: "./Paginas/exercicio/mulheres/treinos/costasbracos/avancado.html",
+
+        dados: "./Paginas/receitassaciantes/almoco/dados.js",
       },
     },
   },

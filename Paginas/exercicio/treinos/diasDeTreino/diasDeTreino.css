@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Comic+Neue&family=Inter:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body{
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+body main{
+    margin-top: 35px;
+    flex-direction: column;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap: 50px;  
+}
+body img{
+    width: 100%;
+    max-width: 600px;
+}
+main h2{
+    /* Como usar o cardápio do jejum intermitente */
+/* Rectangle 125 */
+
+
+    background: #FF0000;
+    border-radius: 5.49068px;
+
+    height: 48px;
+    right: 66.2px;
+    top: 595px;
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.764px;
+    line-height: 48px;
+    color: #FFFFFF;
+    height: auto;
+    text-align: center;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+main section p{
+    max-width: 606px;
+    height: max-content;
+    padding-bottom: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.8272px;
+    line-height: 22px;
+    text-align: justify;
+    color: #000000;
+}
+
+.listasimples li{
+    max-width: 606px;
+    height: max-content;
+    padding-top:10px;
+    padding-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.8272px;
+    line-height: 22px;
+    text-align: justify;
+    color: #000000;
+
+}
+main section{
+    width: 90%;
+    max-width: 1280px;
+
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 35px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 17.5px;
+}
+
+td{
+    height: 104px;
+    width: 336px;
+    border: red 2px solid;
+    font-family: 'Comic Neue';
+}
+th{
+    width: 121px;
+    font-family: 'Comic Neue';
+    font-weight: 400;
+    border: red 2px solid;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.espaco {
+    border: none;
+}
+
+.buraco {
+    padding: 0;
+    margin: 0;
+    height: 10px;
+}
+
+th:nth-child(2)
+{
+    height: 73px;
+    font-family: 'Black Han Sans';
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+

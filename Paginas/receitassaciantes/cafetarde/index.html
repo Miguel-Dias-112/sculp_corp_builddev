@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="../../header.css">
+    <link rel="stylesheet" href="./receitas.css">
+
+    <link rel="stylesheet" href="../../paginaAcesso.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scult Corp</title>
+  </head>
+  <script  src="/dadosCafeTarde.js"></script>
+
+  <script>
+    function goTo(link){
+        let a = document.createElement('a')
+        a.href = link
+        a.click()
+        console.log(link)
+    }
+
+    function gerarReceita(receita){
+                /*let receita = {
+                  titulo: "Café",
+                  imgSrc:"./assets/image.png",
+                  ingredientes: [
+                    "1 xicara de café",
+                    "1 colher de sopa de óleo de coco",
+                    "1 colher de sopa de manteiga"
+                  ],
+                  modoDePreparo: "Bata todos os ingredientes no liquidificador e sirva em seguida.",
+                  reversed: false
+                }*/
+
+
+
+                console.log(receita)
+                let itemCtn = document.createElement('div')
+                itemCtn.classList.add('itemCtn')
+                let titulo = document.createElement('h1')
+                titulo.innerHTML = receita.titulo
+                itemCtn.appendChild(titulo)
+                let ingredientesCtn = document.createElement('div')
+                ingredientesCtn.classList.add('ingredientesCtn')
+                let side = document.createElement('div')
+                side.classList.add('side')
+
+                let img = document.createElement('img')
+                img.src = receita.imgSrc
+                side.appendChild(img)
+
+                let div = document.createElement('div')
+                div.classList.add('side')
+                let h2 = document.createElement('h2')
+                h2.innerHTML = "Ingredientes"
+                let ul = document.createElement('ul')
+                receita.ingredientes.forEach(ingrediente => {
+                  let li = document.createElement('li')
+                  li.innerHTML = ingrediente
+                  ul.appendChild(li)
+                })
+                div.appendChild(h2)
+                div.appendChild(ul)
+                ingredientesCtn.appendChild(side)
+                ingredientesCtn.appendChild(div)
+                itemCtn.appendChild(ingredientesCtn)
+                let h2h = document.createElement('h2')
+                h2h.innerHTML = "Modo de Preparo"
+                if(receita.reversed){
+                  h2h.classList.add('demo')
+                  ingredientesCtn.classList.add('reverseflex')
+
+                }
+
+
+                itemCtn.appendChild(h2h)
+                let p = document.createElement('p')
+                p.innerHTML = receita.modoDePreparo
+                itemCtn.appendChild(p)
+
+                let x = document.getElementById('lista')
+                x.appendChild(itemCtn)
+
+              
+              }
+
+    
+ 
+</script>
+  <body>
+        <header>
+            <div onclick="goTo('../')"> ← </div>
+            <p>Café da tarde</p>
+
+        </header>
+        <main>
+          
+            <div id="lista" class="lista" >  
+              
+              
+              <script>
+                function gerarLista(){
+                  console.log(getDados())
+                  for (let i = 0; i < 4; i++) {
+                    gerarReceita(getDados().receitas[i]);
+                  }
+                }   
+                gerarLista() 
+              </script>
+
+              <div class="itemCtn">
+                <h1>Bolinho de cacau e nozes low carb</h1>
+                
+                <div class="ingredientesCtn center">
+                  <div>
+                    <img src="./assets/image5.png">
+                  </div>
+                  <h2>Ingredientes</h2>
+                  <div class=listaCenter>
+                    <ul>
+                      <li>• 4 ovos</li>
+                      <li>• 2 vidros (400ml) de leite <br>
+                         de coco</li>
+                      <li>• 1/2 chávena (chá) de óleo <br>
+                         de coco extravirgem</li>
+                      <li>• 1 e 1/2 chávena (chá) de <br>
+                         cacau em pó (100%)</li>
+                      <li>• 1 colher (sopa) de extrato <br>
+                         de baunilha</li>
+                      <li>• 1 chávena (chá) de <br>
+                         adoçante xilitol ou estévia <br>
+                         ou açúcar de coco</li>
+                    </ul>
+                  
+                    <ul>
+                      <li>• 2 e 1/2 chávenas (chá) <br>
+                         de farinha de <br>
+                         amêndoas</li>
+                      <li>• 1 colher (chá) de goma <br>
+                         xantana</li>
+                      <li>• 280g de gotas de <br>
+                         chocolate 70% (reserve <br>
+                         um pouco para <br>
+                         decorar)</li>
+                         <li>• 240g de nozes picadas <br> 
+                         (reserve metade para <br>
+                         decora)</li>
+                        </ul>
+                      </ul>
+                        </div></div>
+                         <h2>Modo de Preparo</h2><p>1. No liquidificador, bata os ovos com o leite de coco, o óleo, o cacau, a baunilha e o adoçante e, aos poucos, acrescente a farinha de amêndoa, batendo até ficar uniforme. <br> 2. Adicione a goma xantana e bata até a massa endurecer um pouco. <br> 3. Transfira para uma tigela e incorpore as gotas de chocolate, as nozes e, por fim, o fermento. <br> 4. Despeje em fôrma untada e asse em forno médio preaquecido (180 °C) por cerca de 1 hora ou até firmar.<br> 5. Desenforme morno, regue com a calda e decore com nozes e gotas de chocolate.</p>
+              </div>
+                  
+                  
+                  
+              <script>
+                function gerarLista(){
+                  console.log(getDados())
+                  for (let i = 5; i < getDados().receitas.length; i++) {
+                    gerarReceita(getDados().receitas[i]);
+                  }
+                }     
+                gerarLista()
+              </script>
+              </div>
+        </main>
+      </body>
+</html>

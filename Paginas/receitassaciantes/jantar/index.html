@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="../../header.css">
+    <link rel="stylesheet" href="./receitas.css">
+
+    <link rel="stylesheet" href="../../paginaAcesso.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scult Corp</title>
+  </head>
+  <script>
+    function goTo(link){
+        let a = document.createElement('a')
+        a.href = link
+        a.click()
+        console.log(link)
+    }
+    function gerarReceita(receita){
+                /*let receita = {
+                  titulo: "Café",
+                  imgSrc:"./assets/image.png",
+                  ingredientes: [
+                    "1 xicara de café",
+                    "1 colher de sopa de óleo de coco",
+                    "1 colher de sopa de manteiga"
+                  ],
+                  modoDePreparo: "Bata todos os ingredientes no liquidificador e sirva em seguida.",
+                  reversed: false
+                }*/
+                console.log(receita)
+                let itemCtn = document.createElement('div')
+                itemCtn.classList.add('itemCtn')
+                let titulo = document.createElement('h1')
+                titulo.innerHTML = receita.titulo
+                itemCtn.appendChild(titulo)
+                let ingredientesCtn = document.createElement('div')
+                ingredientesCtn.classList.add('ingredientesCtn')
+                let side = document.createElement('div')
+                side.classList.add('side')
+
+                let img = document.createElement('img')
+                img.src = receita.imgSrc
+                side.appendChild(img)
+
+                let div = document.createElement('div')
+                div.classList.add('side')
+                let h2 = document.createElement('h2')
+                h2.innerHTML = "Ingredientes"
+                let ul = document.createElement('ul')
+                receita.ingredientes.forEach(ingrediente => {
+                  let li = document.createElement('li')
+                  li.innerHTML = ingrediente
+                  ul.appendChild(li)
+                })
+                div.appendChild(h2)
+                div.appendChild(ul)
+                ingredientesCtn.appendChild(side)
+                ingredientesCtn.appendChild(div)
+                itemCtn.appendChild(ingredientesCtn)
+                let h2h = document.createElement('h2')
+                h2h.innerHTML = "Modo de Preparo"
+                if(receita.reversed){
+                  h2h.classList.add('demo')
+                  ingredientesCtn.classList.add('reverseflex')
+
+                }
+
+
+                itemCtn.appendChild(h2h)
+                let p = document.createElement('p')
+                p.innerHTML = receita.modoDePreparo
+                itemCtn.appendChild(p)
+
+                let x = document.getElementById('lista')
+                x.appendChild(itemCtn)
+
+              
+              }
+
+
+ 
+</script>
+  <body>
+        <header>
+            <div onclick="goTo('../')"> ← </div>
+            <p>Jantar</p>
+        </header>
+        <main>
+            <script  src="/dadosJantar.js"></script>
+
+            <div id="lista" class="lista" >  
+             
+
+              <div class="itemCtn">
+                <h1>Batata de Murro</h1>
+                <div class="ingredientesCtn" style="justify-content: space-between;">
+                    <div class="side">
+                        <img  src="./assets/image1.png">
+                    </div>
+                    <div class="side" >
+                      <h2>
+                          Ingredientes
+                      </h2>
+                      <ul>
+                          <li>• Batatas</li>
+                          <li>• Água</li>
+                          <li>• Sal</li>
+                          <li>• Azeite</li>
+                          <li>• Pimenta do reino</li>
+                      </ul>
+
+                      
+                  </div>
+                  
+                </div>
+                <h2>
+                  Molho de castanha caju caseiro:
+                </h2>
+                <ul style="gap: 15px;">
+                    <li>• 1/2 xíc de castanha-de-caju (lembre de <br> deixá-las de molho antes de usar);</li>
+                    <li>• 1/2 xíc de água;</li>
+                    <li>• 3 colher de (sopa) de extrato de tomate;</li>
+                    <li>• 1/2 col (sopa) de vinagre de maçã;</li>
+                    <li>• 1 dente de alho;</li>
+                    <li>• Sal a gosto;</li>
+                    <li>1/2 col (chá) de pimenta calabresa</li>
+                </ul>
+                <h2 style="margin-top: 0;">
+                  Modo de preparo:
+                </h2>
+                <p style="padding-bottom: 15px;">
+                  Primeiramente, cozinhe as batatas em água com sal. <br>
+                  Depois, deixe descansar um pouco e prense com um prato <br>
+                  para deixá-las amassadas. Em seguida, em uma assadeira, <br>
+                  arrume as batatas e coloque azeite, sal e pimenta do reino. <br>
+                  Então, deixe no forno a 220 graus por 40 minutos. Enquanto <br>
+                  isso, aproveite para preparar o molho de castanha-de-caju.
+                </p>
+                <h2  style="margin-top: 0;">Molho:</h2>
+                <p> 
+                  Coloque as castanhas (podem ser substituídas por iogurte, <br>
+                  basta diminuir a quantidade de água), água, extrato de <br>
+                  tomate, sal, vinagre, alho e melado. Logo após, bata essa <br>
+                  mistura em um mixer ou liquidificador. <br>
+                  <br>
+                  Por fim, tempere as batatas com alho em pó e está pronto!
+                </p>
+              </div>
+
+              <script>
+                function gerarLista(){
+                  console.log(getDados())
+                  for (let i = 1; i < 7; i++) {
+                    gerarReceita(getDados().receitas[i]);
+                  }
+                }
+                gerarLista()
+              </script>
+              
+
+                
+                <div class="itemCtn">
+                  <h1>Frango Empanado Low Carb Sem <br> Fritar Com Salada</h1>
+                  <div class="ingredientesCtn reverseflex" style="justify-content: space-between;">
+                      <div class="side">
+                          <img  src="./assets/image8.png">
+                      </div>
+                      <div class="side" >
+                        <h2>
+                            Ingredientes
+                        </h2>
+                        <ul>
+                            <li>• 3 filés de peito de frango  </li>
+                            <li>• Suco de ½ limão</li>
+                            <li>• Tempero a gosto (sal, alho)</li>
+                            <li>• Páprica doce ou picante</li>
+                            <li>• Pimenta do reino a gosto</li>
+                            <li>• Queijo mussarela light</li>
+                            <li>• Manjericão para decorar</li>
+                        </ul>
+                    </div>
+                    
+                  </div>
+                  <h2>
+                    Para o molho e para empanar: 
+                  </h2>
+                  <ul style="gap: 15px;">
+                   
+
+                      <li>• 2 tomates sem sementes, picados grandes</li>
+                      <li>• ½ cebola pequena, picada</li>
+                      <li>• Sal a gosto</li>
+                      <li>• 3 dentes de alho, picados</li>
+                      <li>• Cebolinha a gosto</li>
+                      <li>• Pitada de açúcar demerara (para tirar a acidez)</li>
+                      <li>• Farinha de aveia (aproximadamente ½ xícara)</li>
+                      <li>• 2 ovos, batidos e peneirados</li>
+                  </ul>
+                  <h2 class="demo" style="margin-top: 0;">
+                    Modo de preparo:
+                  </h2>
+                  <p >
+                    Comece temperando os filés de frango com suco de limão,
+                    tempero a gosto, páprica e pimenta do reino. Deixe marinar
+                    por pelo menos 30 minutos na geladeira.Enquanto isso,
+                    prepare o molho: em uma panela, refogue a cebola e o alho
+                    em um pouco de azeite até que fiquem dourados. Adicione
+                    os tomates picados, sal, cebolinha e uma pitada de açúcar
+                    demerara para equilibrar a acidez. Cozinhe em fogo baixo
+                    por cerca de 15 minutos, mexendo ocasionalmente, até que
+                   os tomates se desmanchem e o molho esteja encorpado.
+                    Reserve.Empanar os filés de frango: passe-os na farinha de
+                    aveia, em seguida, nos ovos batidos e novamente na farinha
+                    de aveia, garantindo que estejam bem cobertos.Em uma
+                    frigideira antiaderente, aqueça um pouco de azeite e grelhe
+                   os filés empanados até que fiquem dourados e cozidos por
+                    dentro.Pré-aqueça o forno a 180°C.Transfira os filés
+                   grelhados para um refratário e cubra com o molho de
+                  tomate preparado anteriormente.Cubra cada filé com uma
+                   fatia de queijo mussarela light.Leve ao forno pré-aquecido
+                    por cerca de 10 minutos, ou até que o queijo esteja derretido
+                    e borbulhante.Retire do forno e sirva os filés de frango
+                    gratinados com manjericão fresco por cima.Acompanhe
+                    com arroz integral ou uma salada verde para uma refeição
+                    completa.
+                  </p>
+                 
+              </div>
+              <script>
+                  function gerarLista(){
+                    for (let i = 7; i < getDados().receitas.length; i++) {
+                      gerarReceita(getDados().receitas[i]);
+                    }
+                  }
+                  gerarLista()
+              </script>
+
+
+             
+
+
+
+            
+            <div class="itemCtn">
+              <h1>Nuggets saudável</h1>
+              <img style="align-self: center;" src="./assets/image16.png">
+              <div class="ingredientesCtn" style="justify-content: space-between;">
+                  <div class="side" style="width: 40%;">
+                      <h2>
+                        Para empanar:
+                      </h2>
+                      <ul>
+                        <li>• ½ kg de peito de frango cru cortado em pedaços</li>
+                        <li>• 4 colheres de sopa de azeite de oliva</li>
+                        <li>• ½ colher de chá de sal rosa</li>
+                        <li>• 3 dentes de alho picados</li>
+                        <li>• ½ cebola picada</li>
+                        <li>• ½ colher de chá de páprica defumada</li>
+                        <li>• ½ colher de chá de cúrcuma </li>
+                        <li>• 2 colheres de sopa de cheiro verde picado</li>
+                        <li>• Pimenta do reino a gosto</li>
+                      </ul>
+                  </div>
+                  <div class="side" style="width: 40%;">
+                    <h2>
+                        Ingredientes
+                    </h2>
+                    <ul>
+                      <li>• ½ kg de peito de frango cru cortado em pedaços</li>
+                      <li>• 4 colheres de sopa de azeite de oliva</li>
+                      <li>• ½ colher de chá de sal rosa</li>
+                      <li>• 3 dentes de alho picados</li>
+                      <li>• ½ cebola picada</li>
+                      <li>• ½ colher de chá de páprica defumada</li>
+                      <li>• ½ colher de chá de cúrcuma </li>
+                      <li>• 2 colheres de sopa de cheiro verde picado</li>
+                      <li>• Pimenta do reino a gosto</li>
+                    </ul>
+                </div>
+
+              </div>
+              <h2> Modo de preparo do purê de couve-flor</h2>
+              <ol style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; padding: 0; margin: 0;">
+                  <li style="padding-left: 10px;">Cozinhe a couve-flor em água fervente até ficar macia.</li>
+                  <li style="padding-left: 10px;">Escorra bem a couve flor cozida e coloque em um<br> processador de alimentos ou liquidificador.</li>
+                  <li style="padding-left: 10px;">Adicione o alho, a manteiga ou o azeite de oliva, o,<br/> sal e a pimenta.</li>
+                  <li style="padding-left: 10px;">Bata até obter mistura cremosa e homogênea. <br> Reserve</li>
+              </ol>
+              <h2> Modo de preparo do arroz integral</h2>
+              <ol style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; padding: 0; margin: 0;">
+                  <li style="padding-left: 10px;">Em uma panela, coloque o arroz integral e a água ou caldo d elegumes</li>
+                  <li style="padding-left: 10px;">Tempere com sal a gosto e leve ao fogo médio</li>
+                  <li style="padding-left: 10px;">Deixe cozinhar por cerca de 30-40 minutos, ou até que o<br> arroz esteja macio e a água tenha sido absorvida</li>
+                  <li style="padding-left: 10px;">Retire do fog e deixe descansar por alguns minutos</li>
+              </ol>
+              <h2> Montagem</h2>
+              <ol style="display: flex;  flex-direction: column; align-items: flex-start; text-align: left; padding: 0; margin: 0; padding-bottom: 100px;">
+                <li style="padding-left: 10px;">Em pratos individuais, coloque uma porção do purê de couve-flor e outra do arroz integral ao lado.</li>
+                <li style="padding-left: 10px;">Sirva quente como acompanhamento de outros pratos, como carnes ou legumes grelhados.</li>
+
+            </ol>
+            </div>
+        </main>
+        
+  </body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="./receitas.css" />
+
+    <link rel="stylesheet" href="../../paginaAcesso.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scult Corp</title>
+  </head>
+  <script>
+    function goTo(link) {
+      let a = document.createElement("a");
+      a.href = link;
+      a.click();
+      console.log(link);
+    }
+  </script>
+  <body>
+    <header>
+      <div onclick="goTo('../')">←</div>
+      <p>Sobremesas</p>
+    </header>
+    <main>
+      <div id="lista" class="lista">
+        <script src="./dados.js"></script>
+        <script  src="./dadosSobremesas.js"></script>
+
+        <script>
+          function gerarReceita(receita) {
+            /*let receita = {
+                     titulo: "Café",
+                     imgSrc:"./assets/image.png",
+                     ingredientes: [
+                       "1 xicara de café",
+                       "1 colher de sopa de óleo de coco",
+                       "1 colher de sopa de manteiga"
+                     ],
+                     modoDePreparo: "Bata todos os ingredientes no liquidificador e sirva em seguida.",
+                     reversed: false
+                   }*/
+
+            console.log(receita);
+            let itemCtn = document.createElement("div");
+            itemCtn.classList.add("itemCtn");
+            let titulo = document.createElement("h1");
+            titulo.innerHTML = receita.titulo;
+            itemCtn.appendChild(titulo);
+            let ingredientesCtn = document.createElement("div");
+            ingredientesCtn.classList.add("ingredientesCtn");
+            let side = document.createElement("div");
+            side.classList.add("side");
+
+            let img = document.createElement("img");
+            img.src = receita.imgSrc;
+            side.appendChild(img);
+
+            let div = document.createElement("div");
+            div.classList.add("side");
+            let h2 = document.createElement("h2");
+            h2.innerHTML = "Ingredientes";
+            let ul = document.createElement("ul");
+            receita.ingredientes.forEach((ingrediente) => {
+              let li = document.createElement("li");
+              li.innerHTML = ingrediente;
+              ul.appendChild(li);
+            });
+            div.appendChild(h2);
+            div.appendChild(ul);
+            ingredientesCtn.appendChild(side);
+            ingredientesCtn.appendChild(div);
+            itemCtn.appendChild(ingredientesCtn);
+            let h2h = document.createElement("h2");
+            h2h.innerHTML = "Modo de Preparo";
+            if (receita.reversed) {
+              h2h.classList.add("demo");
+              ingredientesCtn.classList.add("reverseflex");
+            }
+
+            itemCtn.appendChild(h2h);
+            let p = document.createElement("p");
+            p.innerHTML = receita.modoDePreparo;
+            itemCtn.appendChild(p);
+
+            let x = document.getElementById("lista");
+            x.appendChild(itemCtn);
+          }
+
+          function gerarLista() {
+            console.log(getDados());
+            for (let i = 0; i < 2; i++) {
+              gerarReceita(getDados().receitas[i]);
+            }
+          }
+          gerarLista();
+        </script>
+        <div class="itemCtn">
+          <h1>Cheesecake low carb de frutas vermelhas</h1>
+          <div class="ingredientesCtn reverseflex">
+            <div class="side"><img src="./assets/image copy 3.png" /></div>
+            <div class="side">
+              <h2>Ingredientes da massa</h2>
+              <ul>
+                <li>• 3 xícaras de farinha de amêndoas</li>
+                <li>• 1 ovo</li>
+                <li>• 2 colher de sopa de manteiga derretida</li>
+              </ul>
+              <h2>Ingredientes da massa</h2>
+              <ul>
+                <li>• 2 ovo</li>
+                <li>• 500 gramas de cream cheese</li>
+                <li>• 1/2 limão-siciliano espremido</li>
+                <li>• Raspas de limão-siciliano</li>
+                <li>• Geleia de frambuesa a gosto</li>
+              </ul>
+            </div>
+          </div>
+          <h2 class="demo">Modo de Preparo</h2>
+          <p>
+            Misture todos os ingredientes.Forre o fundo e laterais de uma forma
+            de fundo removível com a massa.Faça furinhos com um garfo.Asse em
+            forno médio por 10 minutos.
+          </p>
+          <h2 class="demo">Modo de Preparo</h2>
+          <p>
+            Bata os ovos, o cream cheese, o xilitol, o suco e as raspas de
+            limão.Despeje sobre a massa pré-assada.Retorne ao forno a 200 °C por
+            mais 30 minutos.Deixe na geladeira até esfriar.Cubra com a geleia de
+            frutas vermelhas.Agora é só servir! Bom apetite.
+          </p>
+        </div>
+        <script>
+          function gerarReceita(receita) {
+            /*let receita = {
+                     titulo: "Café",
+                     imgSrc:"./assets/image.png",
+                     ingredientes: [
+                       "1 xicara de café",
+                       "1 colher de sopa de óleo de coco",
+                       "1 colher de sopa de manteiga"
+                     ],
+                     modoDePreparo: "Bata todos os ingredientes no liquidificador e sirva em seguida.",
+                     reversed: false
+                   }*/
+
+            console.log(receita);
+            let itemCtn = document.createElement("div");
+            itemCtn.classList.add("itemCtn");
+            let titulo = document.createElement("h1");
+            titulo.innerHTML = receita.titulo;
+            itemCtn.appendChild(titulo);
+            let ingredientesCtn = document.createElement("div");
+            ingredientesCtn.classList.add("ingredientesCtn");
+            let side = document.createElement("div");
+            side.classList.add("side");
+
+            let img = document.createElement("img");
+            img.src = receita.imgSrc;
+            side.appendChild(img);
+
+            let div = document.createElement("div");
+            div.classList.add("side");
+            let h2 = document.createElement("h2");
+            h2.innerHTML = "Ingredientes";
+            let ul = document.createElement("ul");
+            receita.ingredientes.forEach((ingrediente) => {
+              let li = document.createElement("li");
+              li.innerHTML = ingrediente;
+              ul.appendChild(li);
+            });
+            div.appendChild(h2);
+            div.appendChild(ul);
+            ingredientesCtn.appendChild(side);
+            ingredientesCtn.appendChild(div);
+            itemCtn.appendChild(ingredientesCtn);
+            let h2h = document.createElement("h2");
+            h2h.innerHTML = "Modo de Preparo";
+            if (receita.reversed) {
+              h2h.classList.add("demo");
+              ingredientesCtn.classList.add("reverseflex");
+            }
+
+            itemCtn.appendChild(h2h);
+            let p = document.createElement("p");
+            p.innerHTML = receita.modoDePreparo;
+            itemCtn.appendChild(p);
+
+            let x = document.getElementById("lista");
+            x.appendChild(itemCtn);
+          }
+
+          function gerarLista() {
+            console.log(getDados());
+            for (let i = 4; i < 8; i++) {
+              gerarReceita(getDados().receitas[i]);
+            }
+          }
+          gerarLista();
+        </script>
+        <div class="itemCtn">
+          <h1>Dadinho no fit de chocolate com coco</h1>
+          <div class="ingredientesCtn">
+            <div class="side"><img src="./assets/image copy 8.png" /></div>
+            <div class="side">
+              <h2>Ingredientes</h2>
+              <ul>
+                <li>• 11/2 xícara (chá) de coco seco ralado</li>
+                <li>• 4 colheres (sopa) de óleo de coco</li>
+                <li>• 1 colher (sopa) de leite de coco</li>
+                <li>
+                  • 1 colher (sopa) de adoçante xylytol (também pode ser
+                  eritritol,stevia...)
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h2>Modo de Do recheio do recheio</h2>
+          <p>
+            Coloque num processador ou liquidificador o coco ralado, 2 colheres
+            do óleo de coco, o leite de coco e o adoçante natural. Processe até
+            chegar à consistência de uma massinha e transfira para uma
+            tigela.Amasse com as mãos e modele pequenas bolinhas. Leve ara o
+            freezer por cerca de 40 minutos.
+          </p>
+          <h2>Modo de preparo Da cobertura</h2>
+          <p>
+            Num bowl, derreta em banho-maria ou micro-ondas o chocolate picado,
+            as outras 2 colheres do óleo de coco e o melaço de cana. Transfira
+            essa cobertura para uma fôrma de gelo de silicone cobrindo 3/4 de
+            cada quadradinho da fôrma e logo em seguida afunde as bolinhos de
+            coco nesse chocolate derretido. Leve ao freezer por mais uma hora.
+          </p>
+        </div>
+        <script>
+          function gerarReceita(receita) {
+            /*let receita = {
+                     titulo: "Café",
+                     imgSrc:"./assets/image.png",
+                     ingredientes: [
+                       "1 xicara de café",
+                       "1 colher de sopa de óleo de coco",
+                       "1 colher de sopa de manteiga"
+                     ],
+                     modoDePreparo: "Bata todos os ingredientes no liquidificador e sirva em seguida.",
+                     reversed: false
+                   }*/
+
+            console.log(receita);
+            let itemCtn = document.createElement("div");
+            itemCtn.classList.add("itemCtn");
+            let titulo = document.createElement("h1");
+            titulo.innerHTML = receita.titulo;
+            itemCtn.appendChild(titulo);
+            let ingredientesCtn = document.createElement("div");
+            ingredientesCtn.classList.add("ingredientesCtn");
+            let side = document.createElement("div");
+            side.classList.add("side");
+
+            let img = document.createElement("img");
+            img.src = receita.imgSrc;
+            side.appendChild(img);
+
+            let div = document.createElement("div");
+            div.classList.add("side");
+            let h2 = document.createElement("h2");
+            h2.innerHTML = "Ingredientes";
+            let ul = document.createElement("ul");
+            receita.ingredientes.forEach((ingrediente) => {
+              let li = document.createElement("li");
+              li.innerHTML = ingrediente;
+              ul.appendChild(li);
+            });
+            div.appendChild(h2);
+            div.appendChild(ul);
+            ingredientesCtn.appendChild(side);
+            ingredientesCtn.appendChild(div);
+            itemCtn.appendChild(ingredientesCtn);
+            let h2h = document.createElement("h2");
+            h2h.innerHTML = "Modo de Preparo";
+            if (receita.reversed) {
+              h2h.classList.add("demo");
+              ingredientesCtn.classList.add("reverseflex");
+            }
+
+            itemCtn.appendChild(h2h);
+            let p = document.createElement("p");
+            p.innerHTML = receita.modoDePreparo;
+            itemCtn.appendChild(p);
+
+            let x = document.getElementById("lista");
+            x.appendChild(itemCtn);
+          }
+
+          function gerarLista() {
+            console.log(getDados());
+            for (let i = 9; i < getDados().receitas.length; i++) {
+              gerarReceita(getDados().receitas[i]);
+            }
+          }
+          gerarLista();
+        </script>
+        <div class="itemCtn">
+          <h1>Pão de mel levinho</h1>
+          <img style="align-self: center;" src="./assets/image copy 18.png">
+          <div class="ingredientesCtn" style="justify-content: space-between;">
+              <div class="side" style="width: 40%;">
+                  <h2>
+                    Recheio e cobertura:
+                  </h2>
+                  <ul>
+                    <li>• 3 col. (sopa) de doce de leite diet</li>
+                    <li>• 2 col. (sopa) de leite desnatado</li>
+                    <li>• 250g de chocolate ao leite diet para cobertura picado</li>
+                  </ul>
+              </div>
+              <div class="side" style="width: 40%;">
+                <h2>
+                    Ingredientes
+                </h2>
+                <ul>
+                  <li>• 3 ovos</li>
+                  <li>• 2 col. (sopa) de mel</li>
+                  <li>• 2 col. (sopa) de margarina light</li>
+                  <li>• 3/4 de xíc. (chá) de farinha de trigo</li>
+                  <li>• 2 col. (sopa) de maisena</li>
+                  <li>• 1 col. (sobremesa) de adoçante culinário</li>
+                  <li>• 2 col. (sopa) de achocolatado diet</li>
+                  <li>• 1 col. (sopa) de cacau em pó</li>
+                  <li>• 2 col. (sopa) de canela em pó</li>
+                  <li>• 1 pitada de noz-moscada</li>
+                  <li>• Gotas de essência de baunilha</li>
+                  <li>• 1 col. (sopa) de fermento em pó</li>
+                </ul>
+            </div>
+
+          </div>
+          <h2> Modo de preparo</h2>
+          <p>
+            Em uma vasilha, coloque os ovos, o mel e a margarina. Bata com um batedor de arame até que fique uma mistura homogênea. Adicione o restante dos ingredientes delicadamente, deixando o fermento por último. Coloque a massa em uma assadeira pequena untada e asse em forno preaquecido a 180 oC por 20 minutos (a massa não pode ficar ressecada). Deixe amornar e desenforme. 
+          </p>
+          <p><strong>Para o recheio:</strong> corte o bolo em duas partes e espalhe o doce de leite bem misturado com o leite. </p>
+          <p>
+            <strong>Para a cobertura:</strong> coloque o chocolate em uma panela pequena e derreta em banho-maria. Bata com uma espátula de silicone até esfriar. Cubra o bolo e leve à geladeira por 15 minutos. Corte em quadradinh... 
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
