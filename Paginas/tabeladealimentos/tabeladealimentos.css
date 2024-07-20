@@ -1,17 +1,4 @@
-@font-face {
-    font-family: titulo1;
-    src: url(./fonteTitulo1.ttf);
- }
-
- @font-face {
-    font-family: titulo2;
-    src: url(./fonteTitulo2.ttf);
- }
-
- @font-face {
-    font-family: titulo3;
-    src: url(./fonteTitulo3.ttf);
- }
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Buenard:wght@400;700&family=Engagement&family=Holtwood+One+SC&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:wght@100..900&display=swap');
 
 body{
     margin: 0%;
@@ -20,6 +7,7 @@ body{
     align-items: center;
     flex-direction: column;
 }
+
 body main{
     margin-top: 35px;
     flex-direction: column;
@@ -29,19 +17,27 @@ body main{
     align-items: center;  
     gap: 50px;  
 }
+
 body img{
     width: 100%;
     max-width: 600px;
-
+    
 }
-main h2{
-    /* Como usar o cardápio do jejum intermitente */
-/* Rectangle 125 */
 
+h1 {
+    font-family: 'Holtwood One SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29.5325px;
+    line-height: 48px;
+    color: #FF0000;
+}
 
+h2{
+    
     background: #FF0000;
     border-radius: 5.49068px;
-
+    
     height: 48px;
     right: 66.2px;
     top: 595px;
@@ -60,8 +56,22 @@ main h2{
     border-radius: 10px;
     padding-right: 15px;
     padding-left: 15px;
-
+    
 }
+
+h3 {
+    font-family: 'Buenard';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35.5px;
+    line-height: 46px;
+}
+
+main section{
+    width: 90%;
+    max-width: 1280px;
+}
+
 main section p{
 
     max-width: 606px;
@@ -77,61 +87,60 @@ main section p{
 
     padding: 0;
 }
-.listasimples li{
+
+table {
     max-width: 606px;
-    height: max-content;
-    padding-top:10px;
-    padding-bottom: 10px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17.8272px;
-    line-height: 22px;
-    text-align: justify;
-    color: #000000;
 
-}
-main section{
-    width: 90%;
-    max-width: 1280px;
-
-}
-.cardapio{
-    width: 152px;
-    height: 35px;
-}
-table { 
     border-spacing: 0;
     border-collapse: collapse;
     margin-bottom: 35px;
-    }
-td{
-    border: red 3px solid;
-
 }
+
+td{
+    
+    border: red 3px solid;
+    font-family: 'Inter';
+    width: 100px;
+    height: 104px;
+    text-align: center;
+}
+
 th{
     width: 100px;
     height: 104px;
-    color: red;
-    /* Café da manhã */
-
-
-
-font-family: 'Abhaya Libre ExtraBold';
-font-style: normal;
-font-weight: 800;
-font-size: 21.2039px;
-line-height: 25px;
-
-color: #FF0000;
-
-
+    color: #FF0000;
+    
+    font-family: 'Abhaya Libre';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 21.2039px;
+    line-height: 25px;
+    
     border: red 3px solid;
     margin: 0;
     padding: 0;
     background: #D9D9D9;
 }
 
+ol {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    max-width: 606px;
+    height: max-content;
+    padding-bottom: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.8272px;
+    line-height: 22px;
+    text-align: justify;
+    color: #000000;
+    font-family: 'Inter';
+}
+
+
 .listasimples li{
     max-width: 606px;
     height: max-content;
@@ -144,7 +153,7 @@ color: #FF0000;
     line-height: 22px;
     text-align: justify;
     color: #000000;
-
+    
 }
 
 .listasimples li ul{
@@ -159,25 +168,17 @@ color: #FF0000;
     text-align: center;
 }
 
-h1 {
-    font-family: titulo1;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 29.5325px;
-    line-height: 48px;
-    color: #FF0000;
-}
 
 .tituloTabela div:first-child{
     margin-left: 7%;
     max-width: 267px;
     max-height: 57px;
-
+    
     border-radius: 15px 15px 0px 0px;
     text-align: center;
     transform: translateY(50%);
-
-    font-family: titulo2;
+    
+    font-family: 'Engagement';
     font-style: normal;
     font-weight: 400;
     font-size: 47.3298px;
@@ -186,6 +187,10 @@ h1 {
     
 }
 
+.cardapio{
+    width: 152px;
+    height: 35px;
+}
 .tituloTabela div:last-of-type{
     max-width: 606px;
     height: 38px;
@@ -220,15 +225,9 @@ h1 {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 15px;
+    font-family: 'Buenard';
 }
 
-h3 {
-    font-family: titulo3;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35.5px;
-    line-height: 46px;
-}
 
 .primeiroTitle div:first-child{
     background: #FFB800;;
@@ -274,23 +273,4 @@ h3 {
     max-width: 596px;
     text-align: justify;
     padding: 10px;
-}
-
-li {
-    max-width: 606px;
-}
-
-td {
-    width: 100px;
-    height: 104px;
-    text-align: center;
-}
-
-ol {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-table {
-    max-width: 606px;
 }

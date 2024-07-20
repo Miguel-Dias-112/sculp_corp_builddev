@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 
 body {
     display: flex;
@@ -27,26 +29,27 @@ ul{
     margin: 0;
     gap: 45px;
 }
+
 ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: left;
+    font-family: 'Amiri';
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25.8408px;
+    line-height: 45px;
 }
+
 
 ul li div {
     width: min-content;
     height: min-content;
     padding: 10px;
     justify-self: flex-end;
-
-    /* Arrow 10 */
-
-box-sizing: border-box;
-
-
-
-
+    box-sizing: border-box;
 }
 
 ul li img {
@@ -66,10 +69,6 @@ section{
 }
 
 .grifado{
-    /* Treinos de Peito e Tríceps e abdomem */
-/* Rectangle 420 */
-
-
 
     width: 100%;
     height: 26px;
@@ -83,17 +82,16 @@ section{
     line-height: 23px;
     text-align: center;
     color: #000000;
-
-
 }
+
 button{
     width: 329px;
     height: 89px;
     text-align: center;
     background: #FF0000;
-align-self: center;
+    align-self: center;
 
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

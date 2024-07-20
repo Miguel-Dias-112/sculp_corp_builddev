@@ -93,7 +93,6 @@ function getDados(){
                 "• ovos",
                 "• muffins ingleses low carb",
                 "• bacon (opcional)",
-                "• manteiga",
                 "• suco de limão",
                 "• sal",
                 "• pimenta",

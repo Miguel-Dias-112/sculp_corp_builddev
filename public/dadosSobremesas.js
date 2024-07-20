@@ -196,15 +196,15 @@ function getDados(){
                 "• 2 colheres (sopa) de óleo de coco",
                 "• 1 colher (chá) de canela em pó",
                 "• 3/4 xícara (chá) de aveia em flocos",
-                "• 1/3 xícara (chá de castanha-do-pará picada (ou outra castanha)", 
+                "• 1/3 xícara (chá) de castanha-do-pará picada (ou outra castanha)", 
                 "• 1 colher (sopa) de coco seco ralado",
                 "• 1 colher (café) de bicarbonato de sódio"
                 
             ],
             modoDePreparo:`
-                Corte as bananas em rodelas e leve em seguida para congelar por 2 horas. Pique os morangos e também leve ao congelador. Retire as frutas do congelador ou freezer, e deixe que descongelem por 5 minutos.No liquidificador ou processador de alimentos, bata a banana junto com os morangos até virar um creme. Sirva em seguida. 
+            Amasse a banana com um garfo, acrescente o xylitol, o óleo de coco e a canela. Misture bem e acrescente o restante dos ingredientes. Com uma colher de sopa, molde 10 cookies e coloque em uma formauntada com óleo de coco. Asse em forno preaquecido a 180 graus por 15 minutos. Espere esfriar para tirar da forma. 
             `,
-           
+            
 
             imgSrc: "assetsSobremesas/image copy 10.png",
             reversed:false,
@@ -229,11 +229,11 @@ function getDados(){
         {
             titulo : "Brigadeiro de colher funcional feito com biomassa de banana verde",  
             ingredientes : [
-               "• 1/2 abacate grande e maduro",
-               "• 2 colheres (sopa) de adoçantte xylitol",
-                "• 1 limão",
-                "• 1 colher (sopa) de Whey protein proteina vegetal",
-                "• 4 gramas de àgar-àgar (ou kanten) (ou gelatina incolor preparada em 50ml de água)",
+               "• 1 xícara (chá) de Biomassa de banana verde",
+               "• 2 a 3 colheres (sobremesa) de adoçante xylitol ou 2 colheres (sobremesa) de açúcar de coco",
+                "• 1 colher (sobremesa) de manteiga ghi (ou ghee) ou óleo de coco",
+                "• 1 xícara (chá) de chocolate 70% cacau picado ou em gotas",
+                "• 1 xícara chá de leite de coco (ou leite vegetal)",
             ],
             modoDePreparo:`
                 Coloque numa panela média a biomassa, o xylitol , a ghee e mexa sem parar, em fogo médio, até obter a consistência do leite condensado. Acrescente o chocolate e continue mexendo até derretê-lo todo. Em seguida, acrescente o leite de coco e o sal e mexa até começar a desgrudar da panela. Se preferir, coloque na geladeira para esfriar. 

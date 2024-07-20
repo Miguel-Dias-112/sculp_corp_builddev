@@ -130,7 +130,7 @@ function getDados(){
                 "• Leite de coco",
                 "• 1 garrafa de 200 ml de leite de coco",
                 "• 100g de farinha de coco ou amêndoas",
-                "• Fermento em pó químico",
+                "• 1 colher (sopa) Fermento em pó químico",
 
             ],
             modoDePreparo:"Pré-aqueça o forno a 180°C e unte uma forma para bolo.Em uma tigela grande, bata os ovos até ficarem bem misturados. Adicione a manteiga derretida e o adoçante culinário à mistura de ovos e bata até ficar homogêneo.Acrescente o cacau em pó, o leite de coco e a farinha de coco ou amêndoas à mistura e mexa bem até obter uma massa uniforme. Por último, adicione o fermento em pó e misture delicadamente. Despeje a massa na forma preparada e leve ao forno pré-aquecido por aproximadamente 30-40 minutos, ou até que um palito inserido no centro do bolo saia limpo. Retire o bolo do forno e deixe esfriar antes de desenformar e servir.",
@@ -258,7 +258,7 @@ function getDados(){
                 "• 1 pitada de sal",
                 "• 2 bananas maduras <br/> amassadas",
                 "• 1 ovo",
-                "• 1/2 xícara de pur^de maçã <br/> natural",
+                "• 1/2 xícara de purê de maçã <br/> natural",
                 "• 1/2 xícara de amêndoa moída",
             ],
             modoDePreparo:"Pré-aqueça o forno a 180°C e unte levemente uma assadeira.Em uma tigela grande, misture a aveia em flocos, a canela (se estiver usando) e uma pitada de sal.Em outra tigela, amasse as bananas maduras até obter um purê.Adicione o purê de banana e o purê de maçã à mistura de aveia em flocos e mexa bem até ficar homogêneo.Adicione a amêndoa moída à mistura e mexa até incorporar completamente.Espalhe a mistura uniformemente na assadeira preparada, pressionando levemente para compactar.Asse no forno pré-aquecido por 25-30 minutos, ou até que as barras estejam douradas e firmes ao toque.Retire do forno e deixe esfriar completamente na assadeira antes de cortar em barras.Depois de esfriar, corte em barras do tamanho desejado e aproveite!",

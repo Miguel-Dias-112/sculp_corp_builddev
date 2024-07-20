@@ -110,3 +110,7 @@ img{
     gap: 15px;
     list-style: square;
 }
+
+ol li{
+    font-family: 'krub';
+}

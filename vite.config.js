@@ -75,6 +75,15 @@ export default defineConfig({
         page51: "./Paginas/exercicio/mulheres/treinos/costasbracos/intermediario.html",
         page52: "./Paginas/exercicio/mulheres/treinos/costasbracos/avancado.html",
 
+        page53: "./Paginas/dietajejum/exerciciosjejum/index.html",
+
+        page54: "./Paginas/exercicio/cardio/index.html",
+        page55: "./Paginas/exercicio/mulheres/cardio/index.html",
+        page56: "./Paginas/exercicio/comousar/index.html",
+        page57: "./Paginas/exercicio/mulheres/comousar/index.html",
+        page58: "./Paginas/exercicio/treinos/diasDeTreino/index.html",
+        page59: "./Paginas/exercicio/mulheres/diasDeTreino/index.html",
+
         dados: "./Paginas/receitassaciantes/almoco/dados.js",
       },
     },

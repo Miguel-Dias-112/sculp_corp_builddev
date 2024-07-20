@@ -106,3 +106,7 @@ p .reverse{
     gap: 15px;
     list-style: square;
 }
+
+.side ul li {
+    font-family: "Lakki Reddy";
+}

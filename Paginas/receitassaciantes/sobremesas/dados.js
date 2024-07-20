@@ -202,7 +202,7 @@ function getDados(){
                 
             ],
             modoDePreparo:`
-                Corte as bananas em rodelas e leve em seguida para congelar por 2 horas. Pique os morangos e também leve ao congelador. Retire as frutas do congelador ou freezer, e deixe que descongelem por 5 minutos.No liquidificador ou processador de alimentos, bata a banana junto com os morangos até virar um creme. Sirva em seguida. 
+                Amasse a banana com um garfo, acrescente o xylitol, o óleo de coco e a canela. Misture bem e acrescente o restante dos ingredientes. Com uma colher de sopa, molde 10 cookies e coloque em uma formauntada com óleo de coco. Asse em forno preaquecido a 180 graus por 15 minutos. Espere esfriar para tirar da forma. 
             `,
            
 
