@@ -30,45 +30,6 @@ main section p,main section li{
     color: #000000;
 }
 
-.tituloCtn{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 15px;
-    font-family: "Candal", sans-serif;
-    
-}
-.tituloCtn .number{
-    font-family: 'Lakki Reddy';
-    font-size: 30px;
-    line-height: 30px;
-    
-    margin: 0;
-    margin-right: 20px;
-    padding: 20px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-
-    border: 2px solid black;
-    border-radius: 360px;
-    width: 20px;
-    height: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.tituloCtn .title{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    
-    margin-top: 20px
-
-}
 
 
 

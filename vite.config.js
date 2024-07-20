@@ -85,6 +85,18 @@ export default defineConfig({
         page59: "./Paginas/exercicio/mulheres/diasDeTreino/index.html",
 
         dados: "./Paginas/receitassaciantes/almoco/dados.js",
+
+        page21: './Paginas/exercicio/mulheres/index.html', // página inicial
+
+        page60: './Paginas/exercicio/treinos/costaBracoAbdomen/avancado.html', // página inicial
+        page61: './Paginas/exercicio/treinos/costaBracoAbdomen/iniciante.html', // página inicial
+        page62: './Paginas/exercicio/treinos/costaBracoAbdomen/intermediario.html', // página inicial
+        page63: './Paginas/exercicio/treinos/ombroAntebraco/avancado.html', // página inicial
+        page64: './Paginas/exercicio/treinos/ombroAntebraco/iniciante.html', // página inicial
+        page65: './Paginas/exercicio/treinos/ombroAntebraco/intermediario.html', // página inicial
+
+
+        
       },
     },
   },
