@@ -16,6 +16,8 @@ body main{
     justify-content: center;
     align-items: center;  
     gap: 50px;  
+    width: 100%;
+    overflow: hidden;
 }
 
 body img{
@@ -31,6 +33,8 @@ h1 {
     font-size: 29.5325px;
     line-height: 48px;
     color: #FF0000;
+    text-align: center;
+    height: auto;
 }
 
 h2{

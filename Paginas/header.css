@@ -13,7 +13,7 @@ header {
     font-style: normal;
     font-weight: 600;
     font-size: 18.2356px;
-    line-height: 47px;
+    line-height: 23px;
 
     color: #FFFFFF;
 }
@@ -21,7 +21,7 @@ header section{
     width: calc(100% - 64px);
 }
 header p{
-    width: 100%;
+    width: 80%;
     height: 100%;
     padding-left: 15px;
     display: flex;

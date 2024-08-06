@@ -1,12 +1,13 @@
 body{
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     margin: 0%;
     padding: 0;
     background-color: black;
     flex-direction: column;
-    gap: 35px;
+    gap: 5px;
+    width: 100%;
 }
 
 @media (min-width: 600px)  {
@@ -40,6 +41,7 @@ body button{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    
 }
 body button h3{
     color: white;
