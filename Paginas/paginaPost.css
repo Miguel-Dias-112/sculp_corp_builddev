@@ -25,15 +25,17 @@ main h2{
     background: #FF0000;
     border-radius: 5.49068px;
 
-    height: 48px;
+    
     right: 66.2px;
     top: 595px;
     font-family: 'Inknut Antiqua';
     font-style: normal;
     font-weight: 600;
-    font-size: 18.764px;
+    font-size: small;
     line-height: 48px;
     color: #FFFFFF;
+
+    max-width: 80%;
     height: auto;
     text-align: center;
     display: flex;
