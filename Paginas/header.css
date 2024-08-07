@@ -40,3 +40,8 @@ header div {
     height: 100%;
     aspect-ratio: 1/1;
 }
+.windowScroll{
+    width:100%;
+    overflow: scroll;
+    height: auto;
+}

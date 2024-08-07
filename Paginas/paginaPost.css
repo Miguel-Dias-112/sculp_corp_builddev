@@ -118,6 +118,7 @@ th{
     line-height: 25px;
     color: #FF0000;
     border: red 3px solid;
+    min-width: 100px;
     margin: 0;
     padding: 0;
     margin-top: 20px;
